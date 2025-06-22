@@ -98,8 +98,6 @@
               <span>Hongjian Wang</a><sup>1</sup>,</span>
             <span class="author-block">
               <span>Adrian Denzler</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <span>Rongshun Wang</a><sup>1</sup>,
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -267,10 +265,26 @@ for Depth supervison
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Accurate simulation of elastic objects is crucial in fields like robotics, yet existing methods often lack physical realism. 
-            We propose enhancements to the 3D Gaussian Splatting (3DGS) framework by introducing rotation-aware 2D Gaussian primitives using the Kabsch algorithm. 
-            Furthermore, we incorporate depth information by regularizing with ground-truth depth data. Our method, evaluated using photometric and geometric metrics, demonstrates superior performance compared to traditional isotropic 3D Gaussian approaches. 
-            Results highlight improved visual fidelity and quantitative accuracy, although sensitivity to initial conditions and sampling strategies remain challenges for further research.
+            Recent advancements in differentiable rendering have
+improved the task of geometry reconstruction from multi-
+ple views. However, these methods mainly focus on recon-
+structing static scenes with rigid objects ignoring the real
+nature of the objects. This work builds upon a recent method
+that focuses on reconstruction and simulation of elastic ob-
+jects. More specifically, the dynamic system is modeled as
+a Mass-Spring system while the appearance and geometry
+is modeled using the Gaussian Splatting framework. Be-
+ing differentiable, this simulation method allows the estima-
+tion of dynamic parameters by optimization in observation
+space. Combined with the differentiable rendering pipeline,
+this method achieves estimation of dynamic and appearance
+parameters using only photometric losses. In this work, we
+extend the aforementioned method, removing the assump-
+tions made about the Gaussians. We further explore the use
+of alternative 2D primitives and the use of additional super-
+vision signals. We present our results both on synthetic and
+real word dataset and draw useful observations about this
+line of work. 
           </p>
         </div>
       </div>
